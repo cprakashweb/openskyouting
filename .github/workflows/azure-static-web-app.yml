@@ -1,0 +1,23 @@
+name: Deploy OpenSkyOuting
+
+on:
+  push:
+    branches:
+      - develop
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Deploy to Azure Static Web App
+        uses: Azure/static-web-apps-deploy@v1
+        with:
+          azure_static_web_apps_api_token: ${{ secrets.TOKEN }}
+          action: upload
+          app_location: "/"
+          output_location: ""
+          skip_app_build: true
