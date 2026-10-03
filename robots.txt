@@ -1,0 +1,10 @@
+# Robots.txt for Open Sky Outing
+User-agent: *
+Allow: /
+
+# Sitemaps
+Sitemap: https://openskyouting.com/sitemap.xml
+
+# LLM & AI Engine Grounding File
+# Standards-compliant AISEO / GEO context
+# https://openskyouting.com/llms.txt
